@@ -175,11 +175,11 @@ void CSCMatrix::print(std::ostream& os, bool verbose, csint threshold) const
     }
 }
 
-std::ostream& operator<<(std::ostream& os, const CSCMatrix& A)
-{
-    A.print(os, true);  // verbose printing assumed
-    return os;
-}
+// std::ostream& operator<<(std::ostream& os, const CSCMatrix& A)
+// {
+//     A.print(os, true);  // verbose printing assumed
+//     return os;
+// }
 
 
 /*==============================================================================

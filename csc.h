@@ -11,8 +11,10 @@
 #ifndef _CSC_H_
 #define _CSC_H_
 
+#include "sparsematrix.h"
 
-class CSCMatrix
+
+class CSCMatrix : public SparseMatrix
 {
     // Private members
     std::vector<double> v_;  // numerical values, size nzmax

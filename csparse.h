@@ -16,8 +16,7 @@
 #include <iostream>
 #include <vector>
 
-typedef std::size_t csint;
-
+#include "sparsematrix.h"
 #include "csc.h"  // must be first for conversion
 #include "coo.h"
 

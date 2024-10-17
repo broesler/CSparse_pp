@@ -11,8 +11,9 @@
 #ifndef _COO_H_
 #define _COO_H_
 
+#include "sparsematrix.h"
 
-class COOMatrix
+class COOMatrix : public SparseMatrix
 {
     // Private members
     std::vector<double> v_;  // numerical values, size nzmax (auto doubles)
