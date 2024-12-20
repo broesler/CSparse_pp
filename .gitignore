@@ -5,3 +5,4 @@ data/
 # Executables
 test_csparse
 test_stdvector
+test_constoperator

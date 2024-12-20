@@ -17,7 +17,7 @@
 #include <vector>
 
 // typedef std::uint64_t csint;
-typedef unsigned int csint;
+typedef unsigned long long int csint;  // needed for g++-14 compilation
 
 
 class CSCMatrix
