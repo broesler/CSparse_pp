@@ -16,7 +16,8 @@
 #include <iostream>
 #include <vector>
 
-typedef std::uint64_t csint;
+// typedef std::uint64_t csint;
+typedef unsigned int csint;
 
 
 class CSCMatrix
@@ -40,13 +41,6 @@ class CSCMatrix
         double& operator()(csint i, csint j);             // A(i, j) = v
 
         double& insert(csint i, csint j, double v, csint p);
-
-        // TODO check this is correct
-        // Type conversions
-        operator const double() const {
-            assert((M_ == 1) && (N_ == 1));
-            return v_[0];
-        }
 };
 
 

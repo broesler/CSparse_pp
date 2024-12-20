@@ -3,11 +3,10 @@
  *  Created: 2024-12-20 12:05
  *   Author: Bernie Roesler
  *
- *  Description: 
+ *  Description: A MWE to test the const vs non-const operator() function in the
+ *  CSCMatrix class.
  *
  *============================================================================*/
-
-#include <iostream>
 
 #include "minimal_csc.h"
 
@@ -18,7 +17,7 @@ int main() {
     double& ref = A(0, 0);  // Calls double& operator()
     ref = 5;
 
-    std::cout << "-----\nrunning comparison: ";
+    std::cout << "-----\nrunning A(0, 0) == 5: ";
     if (A(0, 0) == 5) {  // calls double& operator()!
         std::cout << "    Assignment successful!" << std::endl;
     }
@@ -28,6 +27,12 @@ int main() {
 
     double val = B(0, 0);   // Calls const double operator() const
     // B(0, 0) = 3; // Compile error: assignment of read-only location ‘B.CSCMatrix::operator()(int, int)’
+
+    std::cout << "-----\nrunning B(0, 0) == 5: ";
+    if (B(0, 0) == 5) {  // calls double& operator()!
+        std::cout << "    Assignment successful!" << std::endl;
+    }
+    std::cout << "-----" << std::endl;
 
     std::cout << A(0, 0) << std::endl; // Output 5
     std::cout << B(0, 0) << std::endl; // Output 5
